@@ -1,29 +1,29 @@
-//  int count_time=0;
-//  int status=1;
-//  int initial=0;
+  int count_time=0;
+  int status=1;
+  int initial=0;
 
 
   while (1)
   {
     /* USER CODE END WHILE */
-//EX1
-//	  if(initial==0)  {HAL_GPIO_TogglePin( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin); 		initial=1;}
-//	  count_time++;
-//	 if(count_time>2){
-//		 if(status==0)
-//		 {
-//			 HAL_GPIO_TogglePin( LED_RED_GPIO_Port , LED_RED_Pin);
-//			 HAL_GPIO_TogglePin( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin);
-//			 status=1;
-//		 }
-//		 else if(status==1){
-//			 HAL_GPIO_TogglePin( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin);
-//			 HAL_GPIO_TogglePin( LED_RED_GPIO_Port , LED_RED_Pin);
-//			 status=0;
-//		 }
-//		 count_time=1;
-//	 }
-//	 	
-//	  HAL_Delay(1000) ;
+EX1
+	  if(initial==0)  {HAL_GPIO_TogglePin( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin); 		initial=1;}
+	  count_time++;
+	 if(count_time>2){
+		 if(status==0)
+		 {
+			 HAL_GPIO_TogglePin( LED_RED_GPIO_Port , LED_RED_Pin);
+			 HAL_GPIO_TogglePin( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin);
+			 status=1;
+		 }
+		 else if(status==1){
+			 HAL_GPIO_TogglePin( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin);
+			 HAL_GPIO_TogglePin( LED_RED_GPIO_Port , LED_RED_Pin);
+			 status=0;
+		 }
+		 count_time=1;
+	 }
+	 	
+	  HAL_Delay(1000) ;
 	  
 }
