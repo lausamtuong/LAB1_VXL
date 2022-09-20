@@ -162,11 +162,13 @@ int main(void)
  int num = 1;
  clearAllClock();
   while (1)
-  {
+  {///ex7
 	  setNumberOnClock(num);
   /* USER CODE END 3 */
 		num++;
+		if(num==13) num=1;
 		  HAL_Delay(1000);
+
 }
 }
 
