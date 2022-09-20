@@ -131,6 +131,7 @@ void clearAllClock(){
 
 }
 void setNumberOnClock(int num){
+
 	switch (num){
 
 	case 1 :{
@@ -183,6 +184,12 @@ void setNumberOnClock(int num){
 	}
 	}
 }
+void realClock(int sec, int min, int hour){
+	clearAllClock();
+	setNumberOnClock(sec);
+	setNumberOnClock(min);
+	setNumberOnClock(hour);
+}
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -213,16 +220,17 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
- int num = 1;
+ int sec=1;
+ int min=4;
+ int hour=6;
  clearAllClock();
   while (1)
   {///ex7
-	  setNumberOnClock(num);
-  /* USER CODE END 3 */
-		num++;
-		if(num==13) num=1;
-		  HAL_Delay(1000);
-
+	  realClock(sec,min,hour);
+	  if(sec==12){sec=0;min++;}
+	  if(min==13){min=1;hour++;}
+	  sec++;
+	  HAL_Delay(1000);
 }
 }
 
