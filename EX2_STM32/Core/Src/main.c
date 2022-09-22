@@ -103,16 +103,16 @@ int main(void)
  			initial++;
  	  	  }
 
- 	  	if(count_time==5) {
+ 	  	if(count_time==4) {
  	  		HAL_GPIO_TogglePin( LED_RED_GPIO_Port , LED_RED_Pin);
  	  		HAL_GPIO_TogglePin( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin);
  	  	}
- 	  	if(count_time==7){
+ 	  	if(count_time==6){
 
  	  		HAL_GPIO_TogglePin( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin);
  	  		HAL_GPIO_TogglePin( LED_GREEN_GPIO_Port , LED_GREEN_Pin);
  	  	}
- 	  	if(count_time==10){
+ 	  	if(count_time==9){
  	  		HAL_GPIO_TogglePin( LED_GREEN_GPIO_Port , LED_GREEN_Pin);
  	  		HAL_GPIO_TogglePin( LED_RED_GPIO_Port , LED_RED_Pin);
  	  		count_time=0;

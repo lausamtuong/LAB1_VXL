@@ -39,11 +39,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   000044f4  00000000  00000000  00039b46  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000798b2  00000000  00000000  0003e03a  2**0
+ 18 .debug_str    000798bd  00000000  00000000  0003e03a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000b78ec  2**0
+ 19 .comment      00000053  00000000  00000000  000b78f7  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000d34  00000000  00000000  000b7940  2**2
+ 20 .debug_frame  00000d34  00000000  00000000  000b794c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -140,9 +140,9 @@ int main(void)
  8000180:	607b      	str	r3, [r7, #4]
  	  	  }
 
- 	  	if(count_time==5) {
+ 	  	if(count_time==4) {
  8000182:	683b      	ldr	r3, [r7, #0]
- 8000184:	2b05      	cmp	r3, #5
+ 8000184:	2b04      	cmp	r3, #4
  8000186:	d107      	bne.n	8000198 <main+0x4c>
  	  		HAL_GPIO_TogglePin( LED_RED_GPIO_Port , LED_RED_Pin);
  8000188:	2120      	movs	r1, #32
@@ -153,9 +153,9 @@ int main(void)
  8000192:	4811      	ldr	r0, [pc, #68]	; (80001d8 <main+0x8c>)
  8000194:	f000 fc3c 	bl	8000a10 <HAL_GPIO_TogglePin>
  	  	}
- 	  	if(count_time==7){
+ 	  	if(count_time==6){
  8000198:	683b      	ldr	r3, [r7, #0]
- 800019a:	2b07      	cmp	r3, #7
+ 800019a:	2b06      	cmp	r3, #6
  800019c:	d107      	bne.n	80001ae <main+0x62>
 
  	  		HAL_GPIO_TogglePin( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin);
@@ -167,9 +167,9 @@ int main(void)
  80001a8:	480b      	ldr	r0, [pc, #44]	; (80001d8 <main+0x8c>)
  80001aa:	f000 fc31 	bl	8000a10 <HAL_GPIO_TogglePin>
  	  	}
- 	  	if(count_time==10){
+ 	  	if(count_time==9){
  80001ae:	683b      	ldr	r3, [r7, #0]
- 80001b0:	2b0a      	cmp	r3, #10
+ 80001b0:	2b09      	cmp	r3, #9
  80001b2:	d109      	bne.n	80001c8 <main+0x7c>
  	  		HAL_GPIO_TogglePin( LED_GREEN_GPIO_Port , LED_GREEN_Pin);
  80001b4:	2180      	movs	r1, #128	; 0x80
