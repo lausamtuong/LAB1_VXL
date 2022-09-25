@@ -163,10 +163,12 @@ int main(void)
  clearAllClock();
   while (1)
   {
-	  setNumberOnClock(num);
+	 /* USER CODE BEGIN 3 */
+	clearAllClock();
+	setNumberOnClock(num);
+	num++;
+	HAL_Delay(1000);
   /* USER CODE END 3 */
-		num++;
-		  HAL_Delay(1000);
 }
 }
 
