@@ -172,8 +172,12 @@ int main(void)
    while (1)
    {///ex7
  	  realClock(sec,min,hour);
- 	  if(sec==12){sec=0;min++;}
- 	  if(min==13){min=1;hour++;}
+ 	  if(sec==12){
+ 		  sec=0;min++;
+ 	  }
+ 	  if(min==13){
+ 		  min=1;hour++;
+ 	  }
  	  sec++;
  	  HAL_Delay(1000);
  }
