@@ -100,9 +100,12 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-	  if(initial==0)  {HAL_GPIO_TogglePin( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin); 		initial=1;}
+	  if(initial==0) {
+		  HAL_GPIO_TogglePin( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin);
+		  initial=1;
+	  }
 	  count_time++;
-	 if(count_time>2){
+	  if(count_time>2){
 		 if(status==0)
 		 {
 			 HAL_GPIO_TogglePin( LED_RED_GPIO_Port , LED_RED_Pin);
