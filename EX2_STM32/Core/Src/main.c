@@ -92,7 +92,10 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   int initial = 0;
-   int count_time=0;
+  int count_time=0;
+  int time_red=4;
+  int time_yellow=6;
+  int time_green=9;
    while (1)
    {
      /* USER CODE END WHILE */
@@ -103,16 +106,16 @@ int main(void)
  			initial++;
  	  	  }
 
- 	  	if(count_time==4) {
+ 	  	if(count_time==time_red) {
  	  		HAL_GPIO_TogglePin( LED_RED_GPIO_Port , LED_RED_Pin);
  	  		HAL_GPIO_TogglePin( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin);
  	  	}
- 	  	if(count_time==6){
+ 	  	if(count_time==time_yellow){
 
  	  		HAL_GPIO_TogglePin( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin);
  	  		HAL_GPIO_TogglePin( LED_GREEN_GPIO_Port , LED_GREEN_Pin);
  	  	}
- 	  	if(count_time==9){
+ 	  	if(count_time==time_green){
  	  		HAL_GPIO_TogglePin( LED_GREEN_GPIO_Port , LED_GREEN_Pin);
  	  		HAL_GPIO_TogglePin( LED_RED_GPIO_Port , LED_RED_Pin);
  	  		count_time=0;
