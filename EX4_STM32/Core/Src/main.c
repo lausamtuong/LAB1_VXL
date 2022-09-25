@@ -165,7 +165,7 @@ void display7SEG(int *count_time){
 	 		  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_3,0);
 	 		  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_5,0);
 	 		  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_6,0);
-	 		  count_time=-1;
+	 		  *count_time=-1;
 	 		  break;
 	 	  };
 
